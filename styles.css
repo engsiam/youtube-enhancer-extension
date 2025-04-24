@@ -1,0 +1,85 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    min-width: 260px;
+    background: rgba(255, 255, 255, 0.3); /* Increased opacity for better contrast */
+    backdrop-filter: blur(12px); /* Frosted glass effect */
+    border-radius: 15px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); /* Soft shadow */
+    text-align: center;
+    height: auto;
+    color: #000000; /* Changed text color to black for better visibility */
+}
+
+.popup-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+h1 {
+    color: #000000;  /* Ensure the title text is black */
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    text-shadow: 0 1px 3px rgba(255, 255, 255, 0.7); /* Subtle light shadow for title */
+}
+
+button {
+    width: 100%;
+    max-width: 200px;
+    margin: 10px 0;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.5); /* Slightly less transparent for better contrast */
+    color: #000000;  /* Ensure the button text is black */
+    cursor: pointer;
+    backdrop-filter: blur(10px); /* Keep the blur effect on buttons */
+    transition: background 0.3s ease-in-out, transform 0.2s;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background: rgba(255, 255, 255, 0.7); /* Brighter background on hover */
+    color: #333;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+button:focus {
+    outline: none;
+}
+
+h2 {
+    color: #000000;  /* Ensure the subheading text is black */
+    font-size: 1.3rem;
+    margin: 10px 0;
+    text-shadow: 0 1px 3px rgba(255, 255, 255, 0.7); /* Subtle shadow */
+}
+
+footer {
+    margin-top: 20px;
+}
+
+footer a {
+    color: #000000;  /* Ensure the footer link is black */
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+}
+
+footer a:hover {
+    color: #007BFF;  /* Blue color on hover */
+}
+
+footer a[href^="tel"] {
+    margin-top: 5px;
+    display: inline-block;
+}

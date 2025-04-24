@@ -1,0 +1,60 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Enhancer",
+  "version": "1.0",
+  "description": "Enhance your YouTube experience by auto-skipping ads, enforcing HD quality, and controlling speed.",
+  "permissions": [
+    "scripting",
+    "tabs",
+    "activeTab",
+    "storage"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Y",
+        "mac": "Command+Shift+Y"
+      },
+      "description": "Open YouTube Enhancer popup"
+    },
+    "force_hd": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+H",
+        "mac": "Command+Shift+H"
+      },
+      "description": "Force HD Quality"
+    },
+    "set_speed_1": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+1",
+        "mac": "Command+Shift+1"
+      },
+      "description": "Set speed to normal (1x)"
+    },
+    "set_speed_2": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+2",
+        "mac": "Command+Shift+2"
+      },
+      "description": "Set speed to 2x"
+    }
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "YouTube Enhancer"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
